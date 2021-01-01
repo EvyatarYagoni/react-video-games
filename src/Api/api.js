@@ -1,5 +1,5 @@
 // Base URL
-const baseUrl = "https://api.rawg.io/api/games?";
+const baseUrl = "https://api.rawg.io/api/games";
 
 // Current Month
 const getCurrentMonth = () => {
@@ -30,8 +30,15 @@ const fullLastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const fullNextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 //Popular Games
-export const popularGamesUrl = `${baseUrl}dates=${fullLastYear},${currentDate}&ordering=-rating&page_size=12`;
+export const popularGamesUrl = `${baseUrl}?dates=${fullLastYear},${currentDate}&ordering=-rating&page_size=12`;
 //UpComing Games
-export const upcomingGamesUrl = `${baseUrl}dates=${currentDate},${fullNextYear}&ordering=-rating&page_size=12`;
+export const upcomingGamesUrl = `${baseUrl}?dates=${currentDate},${fullNextYear}&ordering=-rating&page_size=12`;
 //New Games
-export const newGamesUrl = `${baseUrl}dates=${fullLastYear},${currentDate}&ordering=-released&page_size=12`;
+export const newGamesUrl = `${baseUrl}?dates=${fullLastYear},${currentDate}&ordering=-released&page_size=12`;
+//Game Detail Url
+export const gameDetailUrl = (gameID) => `${baseUrl}/${gameID}`;
+
+// //Game screen Url
+// export const GameDetailUrl = (gameID) => {
+//   return `${baseUrl}/${gameID}`;
+// };

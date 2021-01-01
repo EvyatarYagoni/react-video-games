@@ -6,6 +6,9 @@ import { useSelector } from "react-redux";
 //Components
 import Game from "../components/Game";
 
+//Api - Fetch Game Detail
+import { GameDetailUrl } from "../Api/api";
+
 const Home = () => {
   //FETCH GAMES
   const dispatch = useDispatch();
@@ -24,7 +27,7 @@ const Home = () => {
         <h1 className="text-orange">Popular Games</h1>
         <div className="game-list">
           {popularGames.map((game) => {
-            return <Game game={game} key={game.id} />;
+            return <Game game={game} key={game.id} id={game.id} />;
           })}
         </div>
       </div>
@@ -33,7 +36,7 @@ const Home = () => {
         <h1 className="text-orange">Upcoming Games</h1>
         <div className="game-list">
           {upcomingGames.map((game) => {
-            return <Game game={game} key={game.id} />;
+            return <Game game={game} key={game.id} id={game.id} />;
           })}
         </div>
       </div>
@@ -42,7 +45,7 @@ const Home = () => {
         <h1 className="text-orange">New Games</h1>
         <div className="game-list">
           {newGames.map((game) => {
-            return <Game game={game} key={game.id} />;
+            return <Game game={game} key={game.id} id={game.id} />;
           })}
         </div>
       </div>
