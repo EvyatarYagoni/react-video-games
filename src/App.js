@@ -8,7 +8,6 @@ import "./styles/app.scss";
 function App() {
   return (
     <div>
-      <h1>hhhhh</h1>
       <Nav />
       <Home />
     </div>

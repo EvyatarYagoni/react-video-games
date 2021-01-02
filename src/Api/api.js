@@ -36,8 +36,13 @@ export const upcomingGamesUrl = `${baseUrl}?dates=${currentDate},${fullNextYear}
 //New Games
 export const newGamesUrl = `${baseUrl}?dates=${fullLastYear},${currentDate}&ordering=-released&page_size=12`;
 //Game Detail Url
-export const gameDetailUrl = (gameID) => `${baseUrl}/${gameID}`;
-
+export const gameDetailUrl = (gameID) => {
+  return `${baseUrl}/${gameID}`;
+};
+//Searched Game
+export const searchGameUrl = (gameName) => {
+  return `${baseUrl}?search=${gameName}&page_size=6`;
+};
 // //Game screen Url
 // export const GameDetailUrl = (gameID) => {
 //   return `${baseUrl}/${gameID}`;

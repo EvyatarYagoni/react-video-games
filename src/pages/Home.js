@@ -16,12 +16,25 @@ const Home = () => {
     dispatch(loadGames());
   }, []);
 
+  //UseSelector from the store
   const popularGames = useSelector((state) => state.popular);
   const upcomingGames = useSelector((state) => state.upcoming);
   const newGames = useSelector((state) => state.newGames);
+  const searchedGame = useSelector((state) => state.searched);
 
   return (
     <div>
+      {/* searched Games List */}
+      {searchedGame.length && (
+        <div className="mt-3">
+          <h1 className="text-orange">searched Games</h1>
+          <div className="game-list">
+            {searchedGame.map((game) => {
+              return <Game game={game} key={game.id} id={game.id} />;
+            })}
+          </div>
+        </div>
+      )}
       {/* Popular Games List */}
       <div className="mt-3">
         <h1 className="text-orange">Popular Games</h1>

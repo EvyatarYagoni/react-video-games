@@ -1,7 +1,14 @@
 import react from "react";
+//Redux
+import { useDispatch } from "react-redux";
+import { fetchDetailGame } from "../actions/gamesActions";
 
 const Game = ({ game }) => {
-  const gameDetailHandeler = () => {};
+  //Load Details
+  const dispatch = useDispatch();
+  const gameDetailHandeler = () => {
+    dispatch(fetchDetailGame(game.id));
+  };
 
   return (
     <div className="game-card" onClick={gameDetailHandeler}>

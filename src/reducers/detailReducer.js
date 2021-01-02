@@ -1,8 +1,8 @@
-const intialState = {
+const intial = {
   game: {},
 };
 
-const detailReducer = (state = intialState, action) => {
+const detailReducer = (state = intial, action) => {
   switch (action.type) {
     case "GET_DETAIL":
       return {
