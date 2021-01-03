@@ -9,7 +9,7 @@ const Game = ({ game }) => {
   const gameDetailHandeler = () => {
     dispatch(fetchDetailGame(game.id));
   };
-  //s
+
   return (
     <div className="game-card" onClick={gameDetailHandeler}>
       <div className="game-title">
