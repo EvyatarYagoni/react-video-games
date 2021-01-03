@@ -5,11 +5,19 @@ import { useSelector } from "react-redux";
 
 //Components
 import Game from "../components/Game";
+import GameDetail from "../components/GameDetail";
 
 //Api - Fetch Game Detail
 import { GameDetailUrl } from "../Api/api";
 
+//Router
+import { useLocation } from "react-router-dom";
+
 const Home = () => {
+  //Get the currten location
+  const location = useLocation();
+  const pathID = location.pathname.split("/")[2];
+
   //FETCH GAMES
   const dispatch = useDispatch();
   useEffect(() => {
@@ -24,6 +32,7 @@ const Home = () => {
 
   return (
     <div>
+      {(pathID != undefined ? true : false) && <GameDetail />}
       {/* searched Games List */}
       {searchedGame.length && (
         <div className="mt-3">

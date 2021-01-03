@@ -5,6 +5,7 @@ import {
   newGamesUrl,
   searchGameUrl,
   gameDetailUrl,
+  gameScreenShotUrl,
 } from "../Api/api";
 
 //Action Creator
@@ -33,11 +34,17 @@ export const fetchSearchedGame = (gameName) => async (dispatch) => {
 };
 
 export const fetchDetailGame = (gameID) => async (dispatch) => {
+  dispatch({
+    type: "LOADING_DETAIL",
+  });
+
   const detailData = await axios.get(gameDetailUrl(gameID));
+  const screenShotsData = await axios.get(gameScreenShotUrl(gameID));
   dispatch({
     type: "FETCH_DETAIL_GAME",
     payload: {
       detail: detailData.data,
+      screenShots: screenShotsData.data.results,
     },
   });
 };

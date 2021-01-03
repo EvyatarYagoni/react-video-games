@@ -39,11 +39,11 @@ export const newGamesUrl = `${baseUrl}?dates=${fullLastYear},${currentDate}&orde
 export const gameDetailUrl = (gameID) => {
   return `${baseUrl}/${gameID}`;
 };
+//Game ScreeShots URL
+export const gameScreenShotUrl = (gameID) => {
+  return `${baseUrl}/${gameID}/screenshots`;
+};
 //Searched Game
 export const searchGameUrl = (gameName) => {
   return `${baseUrl}?search=${gameName}&page_size=6`;
 };
-// //Game screen Url
-// export const GameDetailUrl = (gameID) => {
-//   return `${baseUrl}/${gameID}`;
-// };

@@ -1,0 +1,103 @@
+.card-shadow {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.game-detail-card {
+  width: 90vw;
+  height: 90vh;
+  background-color: white;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 7px;
+    background-color: #e2d9d9;
+    border: 1px solid rgb(238, 224, 224);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ff9431;
+    border-radius: 7px;
+  }
+
+  /* Up */
+  &::-webkit-scrollbar-button:vertical:decrement {
+    border-width: 0 7px 14px 7px;
+    border-color: transparent transparent #404040 transparent;
+  }
+
+  &::-webkit-scrollbar-button:vertical:decrement:hover {
+    border-color: transparent transparent #505050 transparent;
+  }
+
+  /* Down */
+  &::-webkit-scrollbar-button:vertical:increment {
+    border-width: 14px 7px 0 7px;
+    border-color: #404040 transparent transparent transparent;
+  }
+
+  &::-webkit-scrollbar-button:vertical:increment:hover {
+    border-color: #505050 transparent transparent transparent;
+  }
+}
+
+.screenshots {
+  &__img {
+    width: 100%;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.platforms {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+}
+
+.item {
+  margin-left: 1rem;
+  width: 3vw;
+  height: 4vh;
+}
+
+.info {
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.rating {
+  color: #917f7f;
+  font-size: 1rem;
+}
+
+.description {
+  margin: 1rem;
+  font-size: 1rem;
+  color: #917f7f;
+}
+
+.background-image-game {
+  width: 100%;
+}
