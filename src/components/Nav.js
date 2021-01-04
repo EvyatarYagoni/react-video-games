@@ -2,6 +2,8 @@ import react, { useState } from "react";
 //Redux
 import { useDispatch } from "react-redux";
 import { fetchSearchedGame } from "../actions/gamesActions";
+//Website LOGO
+import myLogo from "../images/wolf.png";
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -18,7 +20,10 @@ const Nav = () => {
   };
 
   return (
-    <nav>
+    <nav className="navbar">
+      <div className="logo-wrapper">
+        <img className="my-logo" src={myLogo} alt="image" />
+      </div>
       <form className="search-box">
         <input
           value={textInput}

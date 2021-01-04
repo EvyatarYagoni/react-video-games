@@ -8,6 +8,13 @@ import playstation5 from "../images/PlayStation5.png";
 import xbox from "../images/Xbox.png";
 import pc from "../images/PC.png";
 import nintendoSwitch from "../images/NintendoSwitch.png";
+import ios from "../images/ios.png";
+import linux from "../images/Linux.png";
+import macOS from "../images/macOS.png";
+import randomGame from "../images/randomGame.svg";
+//Star Images
+import starEmpty from "../images/empty-star.png";
+import starFull from "../images/full-star.png";
 
 const GameDetail = () => {
   const gameDetail = useSelector((state) => state.detailGame);
@@ -25,6 +32,34 @@ const GameDetail = () => {
     }
   };
 
+  //GET Star Images
+  const getStar = () => {
+    const stars = [];
+    const rating = Math.floor(gameDetail.rating);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(
+          <img
+            src={starFull}
+            alt="image"
+            key={gameDetail.id}
+            className="star-image"
+          ></img>
+        );
+      } else {
+        stars.push(
+          <img
+            src={starEmpty}
+            alt="image"
+            key={gameDetail.id}
+            className="empty-star-image"
+          ></img>
+        );
+      }
+    }
+    return stars;
+  };
+
   //Get Platform Image
   const getPlatform = (platform) => {
     switch (platform) {
@@ -40,6 +75,14 @@ const GameDetail = () => {
         return pc;
       case "Nintendo Switch":
         return nintendoSwitch;
+      case "iOS":
+        return ios;
+      case "Linux":
+        return linux;
+      case "macOS":
+        return macOS;
+      default:
+        return randomGame;
     }
   };
 
@@ -51,7 +94,10 @@ const GameDetail = () => {
             <div className="title">
               <div className="header">
                 <h1 className="mb-1"> {gameDetail.name}</h1>
-                <p className="rating mb-1">rating: {gameDetail.rating}</p>
+                <div className="rating-section mb-1">
+                  <p className="rating">rating: {gameDetail.rating}</p>
+                  {getStar()}
+                </div>
               </div>
               <div className="info">
                 <h1 className="info__header mb-1">platforms</h1>
