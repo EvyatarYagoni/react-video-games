@@ -36,7 +36,7 @@ const Home = () => {
       {/* searched Games List */}
       {searchedGame.length && (
         <div className="mt-3">
-          <h1 className="text-orange">searched Games</h1>
+          <h1 className="text-orange">Results</h1>
           <div className="game-list">
             {searchedGame.map((game) => {
               return <Game game={game} key={game.id} id={game.id} />;
