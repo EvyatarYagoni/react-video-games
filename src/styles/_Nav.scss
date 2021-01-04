@@ -13,9 +13,11 @@
     outline: none;
     border: none;
     background-color: #55c57a;
+    cursor: pointer;
 
     &:hover {
       background-color: #48a868;
+      transform: scale(1.2);
     }
 
     &:active {

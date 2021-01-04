@@ -15,14 +15,15 @@ import randomGame from "../images/randomGame.svg";
 //Star Images
 import starEmpty from "../images/empty-star.png";
 import starFull from "../images/full-star.png";
+//Framer Motion animation
+import { motion } from "framer-motion";
 
-const GameDetail = () => {
+const GameDetail = ({ pathID }) => {
   const gameDetail = useSelector((state) => state.detailGame);
   const gameScreenShots = useSelector((state) => state.gameScreenShots);
   const isLoading = useSelector((state) => state.isLoading);
   //Use History path
   const history = useHistory();
-
   //Exit Detail
   const exitDetailHandler = (e) => {
     const element = e.target;
@@ -39,12 +40,7 @@ const GameDetail = () => {
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
         stars.push(
-          <img
-            src={starFull}
-            alt="image"
-            key={gameDetail.id}
-            className="star-image"
-          ></img>
+          <img src={starFull} alt="image" key={i} className="star-image"></img>
         );
       } else {
         stars.push(
@@ -89,33 +85,33 @@ const GameDetail = () => {
   return (
     <>
       {!isLoading && (
-        <div className="card-shadow" onClick={exitDetailHandler}>
-          <div className="game-detail-card">
-            <div className="title">
-              <div className="header">
+        <motion.div className="card-shadow" onClick={exitDetailHandler}>
+          <motion.div layoutId={pathID} className="game-detail-card">
+            <motion.div className="title">
+              <motion.div className="header">
                 <h1 className="mb-1"> {gameDetail.name}</h1>
-                <div className="rating-section mb-1">
+                <motion.div className="rating-section mb-1">
                   <p className="rating">rating: {gameDetail.rating}</p>
                   {getStar()}
-                </div>
-              </div>
-              <div className="info">
+                </motion.div>
+              </motion.div>
+              <motion.div className="info">
                 <h1 className="info__header mb-1">platforms</h1>
-                <div className="platforms mb-1">
+                <motion.div className="platforms mb-1">
                   {gameDetail.platforms.map((data) => {
                     return (
-                      <img
+                      <motion.img
                         className="item"
                         key={data.platform.id}
                         src={getPlatform(data.platform.name)}
-                      ></img>
+                      ></motion.img>
                     );
                   })}
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
-            <img
+            <motion.img
               className="background-image-game"
               src={gameDetail.background_image}
               alt="image"
@@ -123,20 +119,20 @@ const GameDetail = () => {
 
             <p className="description">{gameDetail.description_raw}</p>
 
-            <div className="screenshots">
+            <motion.div className="screenshots">
               {gameScreenShots.map((screenShot) => {
                 return (
-                  <img
+                  <motion.img
                     className="screenshots__img"
                     key={screenShot.id}
                     src={screenShot.image}
                     alt={screenShot.image}
-                  ></img>
+                  ></motion.img>
                 );
               })}
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       )}
     </>
   );

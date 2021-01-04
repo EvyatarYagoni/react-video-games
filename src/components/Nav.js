@@ -4,6 +4,40 @@ import { useDispatch } from "react-redux";
 import { fetchSearchedGame } from "../actions/gamesActions";
 //Website LOGO
 import myLogo from "../images/wolf.png";
+//Framer motion (animation)
+import { motion } from "framer-motion";
+
+const formVariants = {
+  hidden: {
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 1,
+      delay: 1.1,
+    },
+  },
+};
+
+const logoVariants = {
+  hidden: {
+    x: "100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 1,
+      delay: 1.1,
+    },
+  },
+};
+
+const inputVariants = {
+  hover: {
+    scale: 1.1,
+  },
+};
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -21,24 +55,37 @@ const Nav = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo-wrapper">
+      <motion.div
+        variants={logoVariants}
+        initial="hidden"
+        animate="visible"
+        className="logo-wrapper"
+      >
         <img className="my-logo" src={myLogo} alt="image" />
-      </div>
-      <form className="search-box">
-        <input
+      </motion.div>
+      <motion.form
+        variants={formVariants}
+        initial="hidden"
+        animate="visible"
+        className="search-box"
+      >
+        <motion.input
           value={textInput}
           onChange={inputHandler}
           className="search-input"
           type="text"
+          placeholder="search your game..."
+          variants={inputVariants}
+          whileHover="hover"
         />
-        <button
+        <motion.button
           type="submit"
           onClick={onSubmitHandler}
           className="search-input__btn"
         >
           Search
-        </button>
-      </form>
+        </motion.button>
+      </motion.form>
     </nav>
   );
 };

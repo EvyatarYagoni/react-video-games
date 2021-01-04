@@ -12,6 +12,8 @@ import { GameDetailUrl } from "../Api/api";
 
 //Router
 import { useLocation } from "react-router-dom";
+//Framer motion (animation)
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 const Home = () => {
   //Get the currten location
@@ -31,47 +33,55 @@ const Home = () => {
   const searchedGame = useSelector((state) => state.searched);
 
   return (
-    <div>
-      {(pathID != undefined ? true : false) && <GameDetail />}
-      {/* searched Games List */}
-      {searchedGame.length && (
-        <div className="mt-3">
-          <h1 className="text-orange">Results</h1>
-          <div className="game-list">
-            {searchedGame.map((game) => {
+    <motion.div>
+      {/*  Game Detail PopUp */}
+      <AnimateSharedLayout type="crossfade">
+        <AnimatePresence>
+          {(pathID != undefined ? true : false) && (
+            <GameDetail pathID={pathID} />
+          )}
+        </AnimatePresence>
+
+        {/* searched Games List */}
+        {searchedGame.length && (
+          <motion.div className="mt-3">
+            <h1 className="text-orange">Results</h1>
+            <motion.div className="game-list">
+              {searchedGame.map((game) => {
+                return <Game game={game} key={game.id} id={game.id} />;
+              })}
+            </motion.div>
+          </motion.div>
+        )}
+        {/* Popular Games List */}
+        <motion.div className="mt-3">
+          <h1 className="text-orange">Popular Games</h1>
+          <motion.div className="game-list">
+            {popularGames.map((game) => {
               return <Game game={game} key={game.id} id={game.id} />;
             })}
-          </div>
-        </div>
-      )}
-      {/* Popular Games List */}
-      <div className="mt-3">
-        <h1 className="text-orange">Popular Games</h1>
-        <div className="game-list">
-          {popularGames.map((game) => {
-            return <Game game={game} key={game.id} id={game.id} />;
-          })}
-        </div>
-      </div>
-      {/* Upcoming Games List */}
-      <div className="mt-5">
-        <h1 className="text-orange">Upcoming Games</h1>
-        <div className="game-list">
-          {upcomingGames.map((game) => {
-            return <Game game={game} key={game.id} id={game.id} />;
-          })}
-        </div>
-      </div>
-      {/* New Games List */}
-      <div className="mt-5">
-        <h1 className="text-orange">New Games</h1>
-        <div className="game-list">
-          {newGames.map((game) => {
-            return <Game game={game} key={game.id} id={game.id} />;
-          })}
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </motion.div>
+        {/* Upcoming Games List */}
+        <motion.div className="mt-5">
+          <h1 className="text-orange">Upcoming Games</h1>
+          <motion.div className="game-list">
+            {upcomingGames.map((game) => {
+              return <Game game={game} key={game.id} id={game.id} />;
+            })}
+          </motion.div>
+        </motion.div>
+        {/* New Games List */}
+        <motion.div className="mt-5">
+          <h1 className="text-orange">New Games</h1>
+          <motion.div className="game-list">
+            {newGames.map((game) => {
+              return <Game game={game} key={game.id} id={game.id} />;
+            })}
+          </motion.div>
+        </motion.div>
+      </AnimateSharedLayout>
+    </motion.div>
   );
 };
 
