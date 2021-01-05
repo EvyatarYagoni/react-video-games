@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Video Games (React)
++ The project is about presenting the popular, new and future video games to come and go to stores.
++ The project allows you to search for your favorite video games.
++ Each game displayed on the site has all the full details about it, for example: the platforms on which it is available, pictures from the game, a description of the game, etc.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Motivation
+With the Corona virus more people today are playing video games and the goal was to make them accessible and inform them about all the hottest games today and give them an option to know everything about video games.
 
-## Available Scripts
+## Screenshoths
+![g1](https://user-images.githubusercontent.com/66875688/103643690-bdcfd800-4f5d-11eb-824e-b16c1714d9ad.png)
+![g2](https://user-images.githubusercontent.com/66875688/103644143-93cae580-4f5e-11eb-8914-9759a447c516.png)
+![g3](https://user-images.githubusercontent.com/66875688/103644331-e3111600-4f5e-11eb-803f-10c78ca2e558.png)
+![g4](https://user-images.githubusercontent.com/66875688/103643946-333ba880-4f5e-11eb-8715-b6a9037ad107.png)
+![g5](https://user-images.githubusercontent.com/66875688/103644335-e4dad980-4f5e-11eb-8eb9-4cb0ea51694b.png)
+![g6](https://user-images.githubusercontent.com/66875688/103644478-1d7ab300-4f5f-11eb-9ede-6f68579f914b.png)
+![g7](https://user-images.githubusercontent.com/66875688/103644022-57978500-4f5e-11eb-90e4-26dd088d92e2.png)
 
-In the project directory, you can run:
+## Framework
++ React
++ Node.js
++ Heroku Cloud Server
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
++ The project contains all the necessary information about video games.
++ You can search for video games that interest you.
++ The site is constantly updating the hottest games in all categories.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Code Examples
+![d1](https://user-images.githubusercontent.com/66875688/103648893-3c307800-4f66-11eb-9f98-a8fb0b634303.png)
+![d2](https://user-images.githubusercontent.com/66875688/103648896-3d61a500-4f66-11eb-8a3d-564f34fc6771.png)
+![d3](https://user-images.githubusercontent.com/66875688/103648901-3e92d200-4f66-11eb-820a-1775fb3b8f90.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Installation
++ Please Read the READEME.md file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Reference
++ <a href="https://rawg.io/apidocs">RAWG Video Games</a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to use?
++ <a href="https://drive.google.com/file/d/1A1cNm6nz9v66nyrwvkyNeEggX9oGf47N/view?usp=sharing">Watch at tutorial (Click Here)</a>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
