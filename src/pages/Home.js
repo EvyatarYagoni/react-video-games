@@ -1,15 +1,10 @@
-import react, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { loadGames } from "../actions/gamesActions";
 import { useSelector } from "react-redux";
-
 //Components
 import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";
-
-//Api - Fetch Game Detail
-import { GameDetailUrl } from "../Api/api";
-
 //Router
 import { useLocation } from "react-router-dom";
 //Framer motion (animation)
@@ -24,6 +19,7 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   //UseSelector from the store
@@ -37,7 +33,7 @@ const Home = () => {
       {/*  Game Detail PopUp */}
       <AnimateSharedLayout type="crossfade">
         <AnimatePresence>
-          {(pathID != undefined ? true : false) && (
+          {(pathID !== undefined ? true : false) && (
             <GameDetail pathID={pathID} />
           )}
         </AnimatePresence>

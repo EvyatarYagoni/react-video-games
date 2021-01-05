@@ -3,17 +3,19 @@
 }
 
 .search-input {
-  width: 30vw;
+  width: 35vw;
   padding: 0.2rem;
   border: none;
   font-weight: bolder;
+  height: 4.5vh;
 
   &__btn {
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 1.5rem;
     outline: none;
     border: none;
     background-color: #55c57a;
     cursor: pointer;
+    height: 4.5vh;
 
     &:hover {
       background-color: #48a868;
@@ -30,4 +32,5 @@
   width: 6rem;
   height: 6rem;
   filter: opacity(0.6);
+  cursor: pointer;
 }

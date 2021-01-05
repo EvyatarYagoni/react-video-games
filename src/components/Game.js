@@ -1,4 +1,3 @@
-import react from "react";
 //Redux
 import { useDispatch } from "react-redux";
 import { fetchDetailGame } from "../actions/gamesActions";
@@ -25,7 +24,7 @@ const Game = ({ game }) => {
     >
       <Link to={`/game/${game.id}`}>
         <motion.div className="game-title">
-          <motion.h3 className="name-game mb-1">{game.name}</motion.h3>
+          <motion.h3 className="mb-1">{game.name}</motion.h3>
           <motion.h4 className="released-game">{game.released}</motion.h4>
         </motion.div>
         <motion.div>

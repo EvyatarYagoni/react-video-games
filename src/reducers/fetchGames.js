@@ -34,6 +34,12 @@ const gamesReducer = (state = initialState, action) => {
         ...state,
         isLoading: true,
       };
+    case "CLEANER_SEARCH": {
+      return {
+        ...state,
+        searched: [],
+      };
+    }
     default:
       return { ...state };
   }

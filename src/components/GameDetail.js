@@ -1,4 +1,3 @@
-import react from "react";
 import { useSelector } from "react-redux";
 //Router
 import { useHistory } from "react-router-dom";
@@ -40,13 +39,18 @@ const GameDetail = ({ pathID }) => {
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
         stars.push(
-          <img src={starFull} alt="image" key={i} className="star-image"></img>
+          <img
+            src={starFull}
+            alt="full star"
+            key={i}
+            className="star-image"
+          ></img>
         );
       } else {
         stars.push(
           <img
             src={starEmpty}
-            alt="image"
+            alt="empty star"
             key={gameDetail.id}
             className="empty-star-image"
           ></img>

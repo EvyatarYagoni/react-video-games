@@ -23,12 +23,14 @@
 
   &::-webkit-scrollbar {
     width: 0.8rem;
+    cursor: pointer;
   }
 
   &::-webkit-scrollbar-track {
     border-radius: 7px;
     background-color: #e2d9d9;
     border: 1px solid rgb(238, 224, 224);
+    cursor: pointer;
   }
 
   &::-webkit-scrollbar-thumb {

@@ -1,4 +1,3 @@
-import react from "react";
 //Components and Pages
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
