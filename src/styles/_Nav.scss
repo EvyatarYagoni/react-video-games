@@ -8,6 +8,8 @@
   border: none;
   font-weight: bolder;
   height: 4.5vh;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 
   &__btn {
     padding: 0.2rem 1.5rem;
@@ -16,15 +18,8 @@
     background-color: #55c57a;
     cursor: pointer;
     height: 4.5vh;
-
-    &:hover {
-      background-color: #48a868;
-      transform: scale(1.2);
-    }
-
-    &:active {
-      transform: translateY(2px);
-    }
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 }
 

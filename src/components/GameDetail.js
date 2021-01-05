@@ -16,6 +16,8 @@ import starEmpty from "../images/empty-star.png";
 import starFull from "../images/full-star.png";
 //Framer Motion animation
 import { motion } from "framer-motion";
+//UUID
+import { v4 as uuidv4 } from "uuid";
 
 const GameDetail = ({ pathID }) => {
   const gameDetail = useSelector((state) => state.detailGame);
@@ -42,7 +44,7 @@ const GameDetail = ({ pathID }) => {
           <img
             src={starFull}
             alt="full star"
-            key={i}
+            key={uuidv4()}
             className="star-image"
           ></img>
         );
@@ -51,7 +53,7 @@ const GameDetail = ({ pathID }) => {
           <img
             src={starEmpty}
             alt="empty star"
-            key={gameDetail.id}
+            key={uuidv4()}
             className="empty-star-image"
           ></img>
         );
@@ -106,7 +108,7 @@ const GameDetail = ({ pathID }) => {
                     return (
                       <motion.img
                         className="item"
-                        key={data.platform.id}
+                        key={uuidv4()}
                         src={getPlatform(data.platform.name)}
                       ></motion.img>
                     );
@@ -128,7 +130,7 @@ const GameDetail = ({ pathID }) => {
                 return (
                   <motion.img
                     className="screenshots__img"
-                    key={screenShot.id}
+                    key={uuidv4()}
                     src={screenShot.image}
                     alt={screenShot.image}
                   ></motion.img>

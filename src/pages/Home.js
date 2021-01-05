@@ -9,6 +9,8 @@ import GameDetail from "../components/GameDetail";
 import { useLocation } from "react-router-dom";
 //Framer motion (animation)
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+//UUID
+import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   //Get the currten location
@@ -44,7 +46,7 @@ const Home = () => {
             <h1 className="text-orange">Results</h1>
             <motion.div className="game-list">
               {searchedGame.map((game) => {
-                return <Game game={game} key={game.id} id={game.id} />;
+                return <Game game={game} key={uuidv4()} id={game.id} />;
               })}
             </motion.div>
           </motion.div>
@@ -54,7 +56,7 @@ const Home = () => {
           <h1 className="text-orange">Popular Games</h1>
           <motion.div className="game-list">
             {popularGames.map((game) => {
-              return <Game game={game} key={game.id} id={game.id} />;
+              return <Game game={game} key={uuidv4()} id={game.id} />;
             })}
           </motion.div>
         </motion.div>
@@ -63,7 +65,7 @@ const Home = () => {
           <h1 className="text-orange">Upcoming Games</h1>
           <motion.div className="game-list">
             {upcomingGames.map((game) => {
-              return <Game game={game} key={game.id} id={game.id} />;
+              return <Game game={game} key={uuidv4()} id={game.id} />;
             })}
           </motion.div>
         </motion.div>
@@ -72,7 +74,7 @@ const Home = () => {
           <h1 className="text-orange">New Games</h1>
           <motion.div className="game-list">
             {newGames.map((game) => {
-              return <Game game={game} key={game.id} id={game.id} />;
+              return <Game game={game} key={uuidv4()} id={game.id} />;
             })}
           </motion.div>
         </motion.div>

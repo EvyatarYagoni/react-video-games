@@ -51,6 +51,13 @@ const searchButtonVariants = {
       stiffness: 100,
     },
   },
+  hover: {
+    scale: 1.2,
+    backgroundColor: "#48a868",
+  },
+  click: {
+    y: 4,
+  },
 };
 
 const Nav = () => {
@@ -107,6 +114,8 @@ const Nav = () => {
           variants={searchButtonVariants}
           initial="hidden"
           animate="visible"
+          whileHover="hover"
+          whileTap="click"
         >
           Search
         </motion.button>
