@@ -34,7 +34,8 @@ With the Corona virus more people today are playing video games and the goal was
 
 
 ## Installation
-+ Please Read the READEME.md file.
++ Please Read the <a href="https://github.com/EvyatarYagoni/react-video-games/blob/main/READEME-(installation).md">READEME-(installation).md</a> file.
+
 
 ## API Reference
 + <a href="https://rawg.io/apidocs">RAWG Video Games</a>
