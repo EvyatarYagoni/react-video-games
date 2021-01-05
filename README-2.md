@@ -39,3 +39,10 @@ With the Corona virus more people today are playing video games and the goal was
 ## API Reference
 + <a href="https://rawg.io/apidocs">RAWG Video Games</a>
 
+
+## How to use?
+
+
+
+
+
