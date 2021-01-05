@@ -29,3 +29,9 @@ body {
   row-gap: 40px;
   margin-top: 4rem;
 }
+
+@media only screen and (max-width: 478px) {
+  body {
+    margin: 1rem 1rem;
+  }
+}
